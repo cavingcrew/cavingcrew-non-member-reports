@@ -1,0 +1,32 @@
+{
+  "name": "qms-audit-project",
+  "version": "1.0.0",
+  "description": "A Google Apps Script to document qms layout and functionality.",
+  "scripts": {
+    "push": "clasp push --auth ~/.clasprc.tdobson.json",
+    "pull": "clasp pull --auth ~/.clasprc.tdobson.json",
+    "watch": "clasp push --watch --auth ~/.clasprc.tdobson.json",
+    "open": "clasp open --auth ~/.clasprc.tdobson.json",
+    "deploy": "clasp deploy --auth ~/.clasprc.tdobson.json",
+    "undeploy": "clasp undeploy --auth ~/.clasprc.tdobson.json",
+    "version": "clasp version --auth ~/.clasprc.tdobson.json",
+    "logs": "clasp logs --auth ~/.clasprc.tdobson.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tdobson/qms-audit-project.git"
+  },
+  "author": "Tim Dobson",
+  "license": "All Rights Reserved",
+  "bugs": {
+    "url": "https://github.com/tdobson/qms-audit-project/issues"
+  },
+  "homepage": "https://github.com/tdobson/qms-audit-project#readme",
+  "dependencies": {
+    "@types/google-apps-script": "^1.0.56",
+    "clasp": "^1.0.0"
+  },
+  "devDependencies": {
+    "@google/clasp": "^2.4.2"
+  }
+}
