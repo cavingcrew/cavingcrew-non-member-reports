@@ -1,9 +1,16 @@
-var password = 'athohKeecieD8xees';
-var server = '18.171.8.199';
-var port = 3306;
-var dbName = 'jtl_cavingcrew_com';
-var username = 'gsheets';
-var url = 'jdbc:mysql://'+server+':'+port+'/'+dbName;
+const scriptProperties = PropertiesService.getScriptProperties();
+
+const server = scriptProperties.getProperty('cred_server');
+const port = parseInt(scriptProperties.getProperty('cred_port'), 10);
+const dbName = scriptProperties.getProperty('cred_dbName');
+const username = scriptProperties.getProperty('cred_username');
+const password = scriptProperties.getProperty('cred_password');
+const url = `jdbc:mysql://${server}:${port}/${dbName}`;
+const cc_location = scriptProperties.getProperty('cred_cc_location');
+const apidomain = scriptProperties.getProperty('cred_apidomain');
+const apiusername = scriptProperties.getProperty('cred_apiusername');
+const apipassword = scriptProperties.getProperty('cred_apipassword');
+const reportYears = [2024,2023,2022,2021]
 
 function onOpen() {
   SpreadsheetApp.getUi()
@@ -13,7 +20,7 @@ function onOpen() {
 }
 
 function main(){
-let years = [2024,2023,2022,2021]
+let years = reportYears
 writeToSpreadsheet(years)
 }
 
